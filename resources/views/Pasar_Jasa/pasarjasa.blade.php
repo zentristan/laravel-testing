@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pasar Jasa – Pasar jasa</title>
 
+    {{-- Favicon --}}
+    <link rel="icon" type="image/png" href="{{ asset('images/fav.png') }}">
+
     {{-- CSS --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset("css/pasarjasa.css") }}">
@@ -22,20 +25,21 @@
 
 </head>
 <body>
-    <header class="navbar">
-        <div class="nav-logo-wrap">
-            <img class="nav-logo" src="{{ asset("images/VokaraLight.png") }}">
-        </div>
-        <nav id="nav" class="d-flex gap-5">
-            <a href="#">Pasar Jasa</a>
-            <a href="#">Lowongan Jasa</a>
-            <a href="#">Placeholder</a>
-        </nav>
-        <div class="masuk">
-            <a href="#">Masuk</a>
-            <button>Mulai Daftar</button>
-        </div>
-    </header>
+    <div class="nav-body">        
+        <header class="navbar d-flex justify-content-between">
+            <div class="nav-logo-wrap">
+                <img class="nav-logo" src="{{ asset("images/VokaraLight.png") }}">
+            </div>
+            <nav id="nav-link" class="d-flex">
+                <a href="#">Pasar Jasa</a>
+                <a href="#">Lowongan Jasa</a>
+                <a href="#">Placeholder</a>
+            </nav>
+            <div class="d-flex gap-2">
+                
+            </div>
+        </header>
+    </div>
 
     <div class="container">
         
