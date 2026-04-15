@@ -10,7 +10,11 @@ Route::get('/', function () {
 });
 
 Route::get('/LowonganJasa', function () {
-    return view('Lowongan_Jasa/lowonganjasa');
+    return view('Lowongan_Jasa.lowonganjasa');
+});
+
+Route::get('/PasarJasa', function () {
+    return view('Pasar_Jasa.pasarjasa');
 });
 // Route::get('/siswa', function () {
 //     return view('siswas.index');
