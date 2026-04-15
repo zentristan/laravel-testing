@@ -8,6 +8,10 @@ Route::resource('/siswas', SiswaController::class);
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/LowonganJasa', function () {
+    return view('Lowongan_Jasa/lowonganjasa');
+});
 // Route::get('/siswa', function () {
 //     return view('siswas.index');
 // });
