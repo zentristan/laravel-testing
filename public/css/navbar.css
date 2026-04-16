@@ -1,0 +1,40 @@
+:root {
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --card-color: #0F2D2B;
+    --background-color: #0E1A1F;
+    --text-color: #e0f2ec;
+}
+.navbar {
+    background-color: var(--card-color);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar img{
+    margin-left: 20px;
+}
+nav {
+    margin-left: 50px;
+}
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 16px;
+}
+.masuk a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 20px;
+}
+.masuk button {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: 6px;
+    padding: 6px 18px;
+    margin-right: 20px;
+}
