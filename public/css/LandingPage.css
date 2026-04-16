@@ -10,8 +10,13 @@
     --secondary-font: "Outfit", sans-serif;
     --accent-font: "Cormorant Garamond", serif;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 body{
     background-color: var(--background-color);
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
 }
 .container {
     max-width: 1200px;
@@ -30,11 +35,11 @@ body{
     width: 25px;
     height: 3px;
     background-color: var(--text-color);
-    transition: all 0.3s;
+    transition: all 0.5s;
     border-radius: 3px;
 }
 .navbar {
-    background-color: var(--background-color);
+    background-color: transparent;
     padding: 0.5rem 0;
     position: fixed;
     top: 20px;
@@ -46,6 +51,102 @@ body{
     border-radius: 50px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
-    border: 2px solid var(--primary-color);
+    border: 0.5px solid var(--text-color);
+    backdrop-filter: blur(10px);
+}
+.nav-menu{
+    display: flex;
+    margin: auto;
+}
+.nav-link{
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 10px 15px;
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 16px;
+}
+.nav-link:hover{
+    color: white;
+}
+.logo-image{
+    width: auto;
+    height: 80px;
+}
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.btn-primary,
+.btn-secondary{
+    display: flex;
+    align-items: end;
+    padding: 10px 20px;
+    border: 0.1px solid var(--text-color);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+}
+.btn-primary:hover,
+.btn-secondary:hover{
+    color: var(--background-color);
+    transition: all 0.5s;
+    background-color: var(--text-color);
+}
+.nav-button{
+    gap: 20px;
+}
 
+.hero{
+    background-image: url(/images/HeroBackground.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 105vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Bagian rotating text nya */
+#rotating-text {
+    transition: opacity 0.4s ease;
+    color: #F59E0B; /* amber gold semai */
+}
+
+#rotating-text.fade-out {
+    opacity: 0;
+}
+.HeroTagline-Text{
+    font-family: var(--accent-font);
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 4rem;
+}
+.HeroDescription-Text{
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-top: 50px;
+    font-weight: 300;
+    font-style: italic;
+}
+.heading-tentang,
+.heading-kami{
+    font-family: var(--accent-font);
+    color: var(--text-color);
+    font-weight: 700;
+}
+.heading-tentang{
+    font-size: 4rem;
+    margin-top: 1rem;
+}
+.heading-kami{
+    font-size: 3.5rem;
+    margin-top: -20px;
 }
