@@ -168,7 +168,7 @@
         display: flex;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-        gap: 20px;
+        gap: 20px; 
         box-sizing: border-box;
     }
     .card-bottom {
