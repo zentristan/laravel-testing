@@ -24,3 +24,7 @@ Route::get('/Sidebar', function () {
 Route::get('/Dashboard', function () {
     return view('Dashboard_Siswa.dashboard_siswa');
 });
+
+Route::get('/Lamaran', function () {
+    return view('Lamaran_Siswa.lamaran_siswa');
+});
