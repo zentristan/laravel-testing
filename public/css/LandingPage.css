@@ -1,4 +1,4 @@
-:root{
+:root {
     --background-color: #0E1A1F;
     --card-color: #0F2D2B;
     --primary-color: #1D9E75;
@@ -10,14 +10,34 @@
     --secondary-font: "Outfit", sans-serif;
     --accent-font: "Cormorant Garamond", serif;
 }
+.whiteMain-text{
+    color: var(--text-color);
+}
 ::-webkit-scrollbar {
     display: none;
 }
-body{
-    background-color: var(--background-color);
-    -ms-overflow-style: none;  /* IE/Edge */
-    scrollbar-width: none;     /* Firefox */
+
+#mainNavbar {
+    transform-origin: top center;
+    transform: translateX(-50%);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
+#mainNavbar.bounce-down {
+    transform: translateX(-50%) translateY(10px);
+}
+
+#mainNavbar.bounce-up {
+    transform: translateX(-50%) translateY(-10px);
+}
+body {
+    background-color: var(--background-color);
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -38,10 +58,10 @@ body{
     transition: all 0.5s;
     border-radius: 3px;
 }
+
 .navbar {
     background-color: transparent;
     padding: 0.5rem 0;
-    position: fixed;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
@@ -50,15 +70,17 @@ body{
     max-width: 1200px;
     border-radius: 50px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    border: 0.5px solid var(--text-color);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 0.5px solid rgba(224, 242, 236, 0.4);
     backdrop-filter: blur(10px);
 }
-.nav-menu{
+
+.nav-menu {
     display: flex;
     margin: auto;
 }
-.nav-link{
+
+.nav-link {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
@@ -68,21 +90,25 @@ body{
     font-weight: 300;
     font-size: 16px;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: white;
 }
-.logo-image{
+
+.logo-image {
     width: auto;
     height: 80px;
 }
-.nav-content{
+
+.nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+
 .btn-primary,
-.btn-secondary{
+.btn-secondary {
     display: flex;
     align-items: end;
     padding: 10px 20px;
@@ -93,17 +119,19 @@ body{
     color: var(--text-color);
     font-family: var(--secondary-font);
 }
+
 .btn-primary:hover,
-.btn-secondary:hover{
+.btn-secondary:hover {
     color: var(--background-color);
     transition: all 0.5s;
     background-color: var(--text-color);
 }
-.nav-button{
+
+.nav-button {
     gap: 20px;
 }
 
-.hero{
+.hero {
     background-image: url(/images/HeroBackground.png);
     background-repeat: no-repeat;
     width: 100%;
@@ -115,38 +143,125 @@ body{
 /* Bagian rotating text nya */
 #rotating-text {
     transition: opacity 0.4s ease;
-    color: #F59E0B; /* amber gold semai */
+    color: #F59E0B;
+    /* amber gold semai */
 }
 
 #rotating-text.fade-out {
     opacity: 0;
 }
-.HeroTagline-Text{
+
+.HeroTagline-Text {
     font-family: var(--accent-font);
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 700;
     font-size: 4rem;
 }
-.HeroDescription-Text{
+
+.HeroDescription-Text {
     font-family: var(--secondary-font);
     font-size: 1.25rem;
     color: var(--text-color);
     margin-top: 50px;
     font-weight: 300;
     font-style: italic;
+    opacity: 0.5;
 }
-.heading-tentang,
-.heading-kami{
+
+.heading-tentang{
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 4rem;
+    margin-top: 1rem;
+    letter-spacing: 0.8rem;
+}
+.heading-kami {
+    font-size: 3.5rem;
+    margin-top: -20px;
+}
+
+.tentang-deskripsi {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.tentangKami-image {
+    width: auto;
+    height: 550px;
+    margin-right: -10rem;
+}
+.PartnerLogo{
+    filter: brightness(0) invert(1);
+    opacity: 50%;
+    /* filter: invert(89%) sepia(21%) saturate(115%) hue-rotate(105deg) brightness(106%) contrast(90%); */
+}
+.PartnerLogo:hover {
+    filter: brightness(0) invert(1) sepia(21%) saturate(115%) hue-rotate(105deg) brightness(106%) contrast(90%);
+    opacity: 100%;
+    transition: all 0.5s;
+}
+.Heading-partner{
+    font-family: var(--secondary-font);
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.keahlianCard1,
+.keahlianCard2,
+.keahlianCard3,
+.keahlianCard4,
+.keahlianCard5 {
+    position: relative;
+    height: 500px;
+    /* overflow: hidden; */
+    border-radius: 100px;
+    transition: all 0.5s;
+}
+.keahlianCard1:hover,
+.keahlianCard2:hover,
+.keahlianCard3:hover,
+.keahlianCard4:hover,
+.keahlianCard5:hover {
+    transform: scale(1.5);
+}
+
+.keahlianCard1::before,
+.keahlianCard2::before,
+.keahlianCard3::before,
+.keahlianCard4::before,
+.keahlianCard5::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+}
+
+.keahlianCard1::before { opacity: 0.5; }
+.keahlianCard2::before { opacity: 0.4; }
+.keahlianCard3::before { opacity: 0.3; }
+.keahlianCard4::before { opacity: 0.2; }
+.keahlianCard5::before { opacity: 0.1; }
+
+.cover-keahlian {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 1;
+}
+.CardKonten-heading{
     font-family: var(--accent-font);
     color: var(--text-color);
     font-weight: 700;
-}
-.heading-tentang{
-    font-size: 4rem;
-    margin-top: 1rem;
-}
-.heading-kami{
-    font-size: 3.5rem;
-    margin-top: -20px;
 }
