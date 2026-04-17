@@ -1,6 +1,6 @@
 <section class="sidebar">
     <div class="sidebar-header">
-        <img src="{{ asset('images/VokaraLight.png') }}" alt="Logo Vokara" width="120" height="80">
+        <img src="{{ asset('images/VokaraLight.png') }}" alt="Logo Vokara" width="110" height="50" style="margin-left: 35px; margin-top: 20px; margin-bottom: 20px;">
     </div>
 
     <div class="sidebar-content">

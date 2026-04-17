@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="{{ asset('css/dashboard_siswa.css') }}">
     
 </head>
-<body class="d-flex">
+<body>
 
         <x-sidebar></x-sidebar>
 
