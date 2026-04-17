@@ -37,7 +37,7 @@ body {
     margin: 0;
 }
 .card-siswa p {
-    color: rgba(255, 255, 255, 0.55);
+    color: var(--text-color);
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 14px;
     margin: 0;
@@ -88,7 +88,7 @@ body {
     justify-content: center;
 }
 .icon-box i {
-    color: rgba(255, 255, 255, 0.50);
+    color: var(--text-color);
     font-size: 18px;
 }
 .card-detail h3 {
@@ -99,7 +99,7 @@ body {
     margin: 0;
 }
 .card-detail p {
-    color: rgba(255, 255, 255, 0.50);
+    color: var(--text-color);
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 13px;
     margin: 0;
@@ -188,7 +188,7 @@ body {
     margin: 0 0 4px 0;
 }
 .card-bottom p {
-    color: rgba(255, 255, 255, 0.50);
+    color: var(--text-color);
     font-family: "Plus Jakarta Sans", sans-serif;
     font-size: 13px;
     margin: 0;
