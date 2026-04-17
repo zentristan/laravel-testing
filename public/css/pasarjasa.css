@@ -26,4 +26,5 @@ body {
     height: 50vh;
     background-size: cover;
     background-position: center;
+    background-image: url('/images/background.png');
 }

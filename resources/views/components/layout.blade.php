@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{ asset("css/pasarjasa.css") }}">
 
     {{-- JS --}}
-    <script src="{{ asset("js/pasarjasa.js") }}"></script>
+    <script src="{{ asset("js/navbar.js") }}"></script>
 </head>
 <body>
 
