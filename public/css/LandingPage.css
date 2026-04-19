@@ -40,7 +40,8 @@ body {
     scrollbar-width: none;
     /* Firefox */
 }
-section{
+
+section {
     padding: 50px 0;
 }
 
@@ -183,7 +184,7 @@ section{
     font-weight: 700;
     font-size: 4rem;
     margin-top: 1rem;
-    letter-spacing: 0.8rem;
+    letter-spacing: 0.5rem;
 }
 
 .heading-kami {
@@ -266,15 +267,19 @@ section{
 .keahlianCard1::before {
     opacity: 0.5;
 }
+
 .keahlianCard2::before {
     opacity: 0.4;
 }
+
 .keahlianCard3::before {
     opacity: 0.3;
 }
+
 .keahlianCard4::before {
     opacity: 0.2;
 }
+
 .keahlianCard5::before {
     opacity: 0.1;
 }
@@ -295,7 +300,7 @@ section{
     font-weight: 600;
 }
 
-.konten-keahlian{
+.konten-keahlian {
     position: absolute;
     inset: 0;
     padding: 1.25rem;
@@ -307,14 +312,16 @@ section{
     font-family: var(--body-font);
     font-weight: 500;
 }
+
 .keahliancard1:hover .konten-keahlian,
 .keahlianCard2:hover .konten-keahlian,
 .keahlianCard3:hover .konten-keahlian,
 .keahlianCard4:hover .konten-keahlian,
-.keahlianCard5:hover .konten-keahlian{
+.keahlianCard5:hover .konten-keahlian {
     opacity: 1;
     transform: translateY(0);
 }
+
 .keahlianCard2:hover .cover-keahlian,
 .keahlianCard3:hover .cover-keahlian,
 .keahlianCard4:hover .cover-keahlian,
@@ -322,4 +329,86 @@ section{
     opacity: 0;
     transform: translateY(-8px);
     pointer-events: none;
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.testimonials-cards{
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 100px;
+    transition: transform 0.25s, border-color 0.25s;
+    padding: 1.25rem;
+    background-repeat: no-repeat;
+}
+.testimonials-content{
+    position: absolute;
+    inset: 0;
+    padding: 1.25rem;
+    color: var(--text-color);
+    font-family: var(--body-font);
+}
+.swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+    .cover-keahlian {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .konten-keahlian {
+        position: static;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        padding: 0;
+        margin-top: 12px;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 12px;
+    }
+
+    .keahlianCard1:hover,
+    .keahlianCard2:hover,
+    .keahlianCard3:hover,
+    .keahlianCard4:hover,
+    .keahlianCard5:hover {
+        transform: none;
+        border-color: #e5e7eb;
+    }
+
+    .keahlianCard1:hover .cover-keahlian,
+    .keahlianCard2:hover .cover-keahlian,
+    .keahlianCard3:hover .cover-keahlian,
+    .keahlianCard4:hover .cover-keahlian,
+    .keahlianCard5:hover .cover-keahlian {
+        opacity: 1;
+        transform: none;
+    }
 }
