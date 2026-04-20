@@ -21,6 +21,14 @@ Route::get('/Sidebar', function () {
     return view('components.sidebar');
 });
 
+Route::get('/Navbarno', function () {
+    return view('components.navbar_templateno');
+});
+
+Route::get('/Navbar', function () {
+    return view('components.navbar_template');
+});
+
 Route::get('/Dashboard', function () {
     return view('Dashboard_Siswa.dashboard_siswa');
 });
