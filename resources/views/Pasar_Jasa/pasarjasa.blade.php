@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pasar Jasa – Pasar jasa</title>
+    <title>Marketplace – Vokara</title>
 
     {{-- Favicon --}}
     <link rel="icon" type="image/png" href="{{ asset('images/fav.png') }}">
@@ -38,47 +38,54 @@
 
 <x-layout>
 <body>
-    <section class="hero">
+    <section class="hero-mp">
     
-    <div class="hero-inner">
+    <div class="hero-2">
         <div class="hero-top">
-            <h1 class="hero-title">Pasar Jasa</h1>
-            <button class="post-btn">+ Posting Proyek</button>
+            <h1 class="hero-title">Marketplace</h1>
         </div>
+        <h3 class="hero-subtitle">0 Jasa Ditemukan dari Siswa SMK</h3>
 
-        <div class="search-box">
+        <div class="search-box-mp">
             <input type="text" placeholder="Cari Jasa, Kategori...">
-        </div>
-
-        <div class="filters">
-            <button class="active">Semua</button>
-            <button>Pemula</button>
-            <button>Menengah</button>
-            <button>Mahir</button>
+            {{-- <button class="search-filter d-flex"><img src="{{ asset("images/sliders-solid.png") }}" width="25" height="25"><p>Filter</p></button> --}}
+            <button class="search-button-mp"><img src="{{ asset("images/magnifying-glass-solid.png") }}" width="25" height="25"></button>
         </div>
     </div>
 
     </section>
 
-    <section class="content">
-        <aside class="sidebar">
+    <section class="content-mp">
+        <aside class="sidebar-mp">
             <h3>Kategori</h3>
             <ul>
-                <li class="active">Semua</li>
-                <li>Menengah</li>
-                <li>Menengah</li>
-                <li>Menengah</li>
-                <li>Menengah</li>
+                <li class="outfit active">Semua</li>
+                <li class="outfit ">Desain Grafis</li>
+                <li class="outfit ">Web Development</li>
+                <li class="outfit ">Video Editing</li>
+                <li class="outfit ">Animasi</li>
+                <li class="outfit ">Fotografi</li>
             </ul>
         </aside>
 
-        <div class="jobs">
-            <div class="card"><span class="job-title">Pemula</span></div>
-            <div class="card"><span class="job-title">Pemula</span></div>
-            <div class="card"><span class="job-title">Semua</span></div>
-            <div class="card"><span class="job-title">Menengah</span></div>
-            <div class="card"><span class="job-title">Menengah</span></div>
-            <div class="card"><span class="job-title">Semua</span></div>
+        <div class="jobs-mp row row-cols-lg-3 gap-3">
+
+            <div class="col card-mp p-0">
+                <img class="card-img-mp" src="{{ asset("images/card_image.jpg") }}">
+                <span class="job-title-mp">Pemula</span>
+                <div class="card-bottom-mp d-flex p-4 justify-content-between">
+                    <div class="d-flex">
+                        <img class="avatar avatar-sm rounded-circle" src="{{ asset("tes") }}">
+                        <div class="d-flex flex-column">
+                            <p class="card-name-mp outfit text-color mb-0">Nama Siswa</p>
+                            <p class="card-subname-mp outfit mb-0">Keahlian – Asal Sekolah</p>
+                        </div>
+                    </div>
+                    <span class="card-kelas-mp text-color mt-1 kelas-10 outfit">
+                        Kelas 10
+                    </span>
+                </div>
+            </div>
         </div>
     </section>
 </div>
