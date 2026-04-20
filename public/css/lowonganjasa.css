@@ -28,9 +28,9 @@ body {
     background-image: url('/images/background.png');
 }
 .hero-inner {
-    max-width: 1475px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 35px 20px;
+    padding: 35px 0px;
 }
 .hero-top {
     display: flex;
