@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="{{ asset('css/proyek.css') }}">
     <link rel="stylesheet" href="{{ asset('css/portofolio_siswa.css') }}">
     <link rel="stylesheet" href="{{ asset('css/lencana_siswa.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ubah_siswa.css') }}">
+
     
 </head>
 <body>

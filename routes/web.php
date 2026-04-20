@@ -57,5 +57,5 @@ Route::get('/Lencana', function () {
 });
 
 Route::get('/UbahProfil', function () {
-    return view('Ubah_Profil_Siswa.ubah_profil_siswa');
+    return view('Ubah_Siswa.ubah_siswa');
 });
