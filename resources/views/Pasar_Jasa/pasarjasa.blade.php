@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Marketplace – Vokara</title>
+    <title>Talenta – Vokara</title>
 
     {{-- Favicon --}}
     <link rel="icon" type="image/png" href="{{ asset('images/fav.png') }}">
@@ -43,7 +43,7 @@
 
             <div class="hero-2">
                 <div class="hero-top">
-                    <h1 class="hero-title">Marketplace</h1>
+                    <h1 class="hero-title">Temukan Talenta</h1>
                 </div>
                 <h3 class="hero-subtitle">0 Jasa Ditemukan dari Siswa SMK</h3>
 

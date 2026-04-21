@@ -7,7 +7,7 @@
     
     <div class="hero-inner">
         <div class="hero-top">
-            <h1 class="hero-title">Lowongan Jasa</h1>
+            <h1 class="hero-title">Temukan Proyek</h1>
             <button class="post-btn">+ Posting Proyek</button>
         </div>
 
