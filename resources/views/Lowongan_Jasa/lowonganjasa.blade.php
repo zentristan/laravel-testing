@@ -4,7 +4,7 @@
 
         <div class="kontener">
 
-            <section class="hero">
+            <section class="hero-tp">
 
                 <div class="hero-inner">
                     <div class="hero-top">

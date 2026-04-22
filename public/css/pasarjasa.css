@@ -133,7 +133,7 @@ body {
     background-color: var(--primary-color);
     padding: 12px 20px;
     border-radius: 14px;
-    margin-top: 0px;
+    margin-top: 4px;
 }
 .sidebar-mp {
     width: 20%;
