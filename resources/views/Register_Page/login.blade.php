@@ -9,7 +9,7 @@
     <!-- Icon Website -->
     <link rel="icon" type="image/png" href="{{ asset('images/fav.png') }}">
     <!-- Connecting CSS -->
-    <link rel="stylesheet" href="{{ asset('css/RegisterPage.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/LoginPage.css') }}">
     <!-- Jakarta Plus Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,46 +32,48 @@
 </section>
 
 <body class="flex justify-center items-center min-h-screen">
-    <section class="w-full max-w-xl px-4">
+    <section class="w-full max-w-lg px-4">
         <div class="container m-auto">
             <div class="page-choosing-category min-h-40 ">
                 <div class="logo-section">
                     <img src="{{ asset('images/fav.png') }}" alt="Vokara Logo" class="logo-image-single mx-auto">
                 </div>
                 <div class="heading-section">
-                    <h2 class="header-choosing-register text-center my-1">Pilih Ingin Mendaftar Menjadi Apa?</h2>
+                    <h2 class="header-choosing-register text-center my-4">Selamat Datang Kembali</h2>
                 </div>
                 <div class="form-choose-section flex-col justify-center">
                     <div class="grid grid-cols-1">
                         <form method="POST">
-                            <input type="hidden" name="role" id="selected-role">
-                            <div class="role-category-card selected w-full gap-5 flex justify-between items-center">
-                                <div class="w-90">
-                                    <i class="fa-solid fa-graduation-cap mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
-                                    <h4 class="header-card">Saya Talenta, <span class="description-card">Ingin Menambahkan Portfolio</span></h4>
+                            <p class="misc-description">Silahkan Masuk Untuk Melanjutkan.</p>
+                            <div>
+                                <input type="text" class="input-box w-full my-2" placeholder="Alamat Email">
+                                <div class="password-container">
+                                    <input type="password" id="password" class="input-box w-full my-2" placeholder="Kata Sandi">
+                                    <i class="fa-solid fa-eye" id="eye"></i>
                                 </div>
-                                <i class="fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
                             </div>
-                            <div class="role-category-card w-full gap-5 flex justify-between items-center">
-                                <div>
-                                    <i class="fa-solid fa-briefcase mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
-                                    <h4 class="header-card">Saya Klien, <span class="description-card">Ingin Menawarkan Jasa Ke Talenta</span></h4>
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <input type="checkbox">
+                                    <p class="misc-description mx-3">Ingat Saya?</p>
                                 </div>
-                                <i class="fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
+                                <a href="#" class="misc-description">Lupa Kata Sandi?</a>
                             </div>
-                            <div class="role-category-card w-full gap-5 flex justify-between items-center">
-                                <div>
-                                    <i class="fa-solid fa-book-open mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
-                                    <h4 class="header-card">Saya Mentor, <span class="description-card">Ingin Mendampingi Talenta</span></h4>
-                                </div>
-                                <i class="fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
+                            <button type="submit" class="masuk-submit-button w-full my-4">Masuk</button>
+                            <div class="flex items-center">
+                                <hr class="w-75 opacity-50">
+                                <p class="misc-description opacity-50 mx-2">Atau</p>
+                                <hr class="w-75 opacity-50">
                             </div>
+                            <button class="other-way-login-button w-full my-2 flex justify-center items-center"><i class="fa-brands fa-google mx-2" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>Masuk Dengan Google</button>
+                            <button class="other-way-login-button w-full my-2 flex justify-center items-center"><i class="fa-solid fa-phone mx-2" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>Masuk Dengan No. Telp</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <script src="{{ asset('js/LandingPage.js') }}"></script>
+    <script src="{{ asset('js/LoginPage.js') }}"></script>
 </body>
+
 </html>

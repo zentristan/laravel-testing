@@ -1,0 +1,89 @@
+:root {
+    --background-color: #0E1A1F;
+    --card-color: #0F2D2B;
+    --primary-color: #1D9E75;
+    --accent-color: #5DCAA5;
+    --highlight-color: #EF9F27;
+    --text-color: #E0F2EC;
+
+    --body-font: "Plus Jakarta Sans", sans-serif;
+    --secondary-font: "Outfit", sans-serif;
+    --accent-font: "Cormorant Garamond", serif;
+}
+body {
+    background: #0F2D2B;
+    background: linear-gradient(0deg, rgba(15, 45, 43, 1) 1%, rgba(20, 117, 86, 1) 100%);
+    width: 100%;
+}
+hr{
+    border: 2px solid rgba(217, 217, 217, 0.5);
+}
+input[type="checkbox"]{
+    accent-color: var(--accent-color);
+    border-radius: 10px;
+}
+.logo-image-single {
+    width: auto;
+    height: 50px;
+}
+.header-choosing-register {
+    color: var(--text-color);
+    font-family: var(--accent-font);
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+.misc-description{
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    font-weight: 300;
+}
+.input-box{
+    background-color: rgba(217, 217, 217, 0.2);
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.5);
+    padding: 10px 20px;
+}
+.password-container{
+    position: relative;
+}
+.password-container input{
+    padding-right: 2.5rem;
+}
+.password-container .fa-eye,
+.password-container .fa-eye-slash{
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+.masuk-submit-button{
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    font-weight: 700;
+    font-family: var(--body-font);
+    padding: 15px 20px;
+    transition: all 0.5s;
+}
+.masuk-submit-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 -10px 40px rgba(29, 158, 117, 0.2);
+}
+.other-way-login-button{
+    background-color: var(--card-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(29, 158, 117, 0.5);
+    transition: all 0.5s;
+}
+.other-way-login-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 -10px 40px rgba(29, 158, 117, 0.2);
+}

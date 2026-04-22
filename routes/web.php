@@ -31,6 +31,9 @@ Route::get('/LandingPage', function () {
 Route::get('/Register', function () {
     return view('Register_Page/register');
 });
+Route::get('/Login', function () {
+    return view('Register_Page/login');
+});
 
 Route::get('/LowonganJasa', function () {
     return view('Lowongan_Jasa.lowonganjasa');
