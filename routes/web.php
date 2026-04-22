@@ -12,6 +12,10 @@ Route::get('/', function () {
 Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
 });
+
+Route::get('/Register', function () {
+    return view('Register_Page/register');
+});
 // Route::get('/siswa', function () {
 //     return view('siswas.index');
 // });

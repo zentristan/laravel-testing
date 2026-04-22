@@ -42,8 +42,8 @@
                     </a>
                 </div>
                 <div class="nav-menu d-flex">
-                    <a href="#" class="nav-link">Jelajahi Jasa</a>
-                    <a href="#" class="nav-link">Cari Talenta</a>
+                    <a href="#" class="nav-link">Temukan Talenta </a>
+                    <a href="#" class="nav-link">Temukan Proyek</a>
                 </div>
                 <div class="nav-button d-flex">
                     <a href="#" class="btn-primary">Daftar Gratis</a>
@@ -320,7 +320,7 @@
                                 <h1 class="fw-bold">01</h1>
                             </div>
                             <div class="content-mulai">
-                                <h3 class="fw-bold cards-heading-mulai">Buat Akun Pertamamu</h3>
+                                <h3 class="fw-bold cards-heading-mulai my-3">Buat Akun Pertamamu</h3>
                                 <p class="opacity-75 fw-normal">Daftarkan dirimu sebagai Talenta, Klien, atau Mentor. Isi profil, jurusan, skill, dan upload portofolio terbaikmu.</p>
                             </div>
                         </div>
@@ -332,7 +332,7 @@
                                 <h1 class="fw-bold">02</h1>
                             </div>
                             <div class="content-mulai">
-                                <h3 class="fw-bold cards-heading-mulai">Tawarkan Jasamu</h3>
+                                <h3 class="fw-bold cards-heading-mulai my-3">Tawarkan Jasamu</h3>
                                 <p class="opacity-75 fw-normal">Buat listing jasa sesuai keahlianmu. Tetapkan harga, estimasi waktu, dan deskripsi yang menarik.</p>
                             </div>
                         </div>
@@ -344,7 +344,7 @@
                                 <h1 class="fw-bold">03</h1>
                             </div>
                             <div class="content-mulai">
-                                <h3 class="fw-bold cards-heading-mulai">Terima Freelance</h3>
+                                <h3 class="fw-bold cards-heading-mulai my-3">Terima Freelance</h3>
                                 <p class="opacity-75 fw-normal">Client UMKM menemukan jasamu dan melakukan order. Kerjakan dengan profesional sesuai deadline.</p>
                             </div>
                         </div>
@@ -356,7 +356,7 @@
                                 <h1 class="fw-bold">04</h1>
                             </div>
                             <div class="content-mulai">
-                                <h3 class="fw-bold cards-heading-mulai">Kumpulkan Portofolio</h3>
+                                <h3 class="fw-bold cards-heading-mulai my-3">Kumpulkan Portofolio</h3>
                                 <p class="opacity-75 fw-normal">Kumpulkan lencana, bangun portofolio nyata, dan tingkatkan levelmu dari Beginner hingga Expert.</p>
                             </div>
                         </div>
@@ -383,29 +383,45 @@
     </div>
     <footer class="footer-bg">
         <div class="container-xl">
-            <div class="row justify-content-end footer-border-top py-5">
+            <div class="row justify-content-end  py-5">
                 <div class="col-auto">
                     <button class="heading-footer-link">Contact Us</button>
-                    <ul class="ps-2">
-                        <li class="footer-link"><a href="www.youtube.com">Youtube</a></li>
-                        <li class="footer-link"><a href="">Instagram</a></li>
-                        <li class="footer-link"><a href="">Twitter</a></li>
-                        <li class="footer-link"><a href="">Facebook</a></li>
+                    <ul class="ps-2 ">
+                        <li class="footer-link"><a href="#">Youtube</a></li>
+                        <li class="footer-link"><a href="#">Instagram</a></li>
+                        <li class="footer-link"><a href="#">Twitter</a></li>
+                        <li class="footer-link"><a href="#">Facebook</a></li>
                     </ul>
                 </div>
                 <div class="col-auto">
                     <button class="heading-footer-link">Menu</button>
                     <ul class="ps-2">
-                        <li class="footer-link"><a href="">Home</a></li>
-                        <li class="footer-link"><a href="">Tentang Kami</a></li>
-                        <li class="footer-link"><a href="">Testimoni</a></li>
-                        <li class="footer-link"><a href="">Langkah</a></li>
+                        <li class="footer-link"><a href="#">Home</a></li>
+                        <li class="footer-link"><a href="#">Tentang Kami</a></li>
+                        <li class="footer-link"><a href="#">Testimoni</a></li>
+                        <li class="footer-link"><a href="#">Langkah</a></li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <button class="heading-footer-link">Legal</button>
+                    <ul class="ps-2">
+                        <li class="footer-link"><a href="#">Terms Of Service</a></li>
+                        <li class="footer-link"><a href="#">Privacy Policy</a></li>
+                        <li class="footer-link"><a href="#">Cookie Policy</a></li>
                     </ul>
                 </div>
             </div>
+            <hr class="">
             <div class="row">
-                <div class="col-12 d-flex justify-content-center align-items-center footer-border-bottom">
+                <div class="col-12 d-flex justify-content-center align-items-center  pb-3">
                     <img src="{{ asset('images/LightLogoFull.png') }}" alt="Vokara Logo" class="logo-image-footer opacity-75">
+                    <div class="gradient-overlay"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between align-items-end pt-3">
+                    <p class="opacity-25 bottom-footer-text">Made With ❤️ From Vokara</p>
+                    <p class="opacity-25 bottom-footer-text">&copy; 2026 Vokara. All rights reserved.</p>
                 </div>
             </div>
         </div>
