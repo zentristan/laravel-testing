@@ -4,9 +4,8 @@
                 <img class="nav-logo" src="{{ asset("images/VokaraLight.png") }}">
             </div>
             <nav id="nav-link" class="d-flex">
-                <a href="#">Pasar Jasa</a>
-                <a href="#">Lowongan Jasa</a>
-                <a href="#">Placeholder</a>
+                <a href="/PasarJasa">Temukan Talenta</a>
+                <a href="/LowonganJasa">Temukan Proyek</a>
             </nav>
             <div class="d-flex gap-2">
 
@@ -24,7 +23,7 @@
                         <hr>
                         <ul class="dropdown-link m-0 p-0">
                             <li>
-                                <a href="">Profile</a>
+                                <a href="/Dashboard">Profile</a>
                             </li>
                             <li>
                                 <a href="">Ubah Profil</a>
