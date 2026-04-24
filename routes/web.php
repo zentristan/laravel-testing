@@ -44,9 +44,30 @@ Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
 });
 
-Route::get('/Lamaran', function () {
-    return view('Lamaran_Siswa.lamaran_siswa');
-})->name('Lamaran');
+
+
+Route::get('/Register', function () {
+    return view('Register_Page/register');
+})-> name('register');
+
+Route::get('/Login', function () {
+    return view('Register_Page/login');
+})-> name('login');
+
+Route::get('/Register-Talenta', function () {
+    return view('Register_Page/register-talenta');
+})-> name('register.talenta');
+
+Route::get('/Register-Klien', function () {
+    return view('Register_Page/register-klien');
+}) -> name('register.klien');;
+
+Route::get('/Register-Mentor', function () {
+    return view('Register_Page/register-mentor');
+})-> name('register.mentor');;
+
+
+
 
 Route::get('/Proyek', function () {
     return view('Proyek_Siswa.proyek_siswa');

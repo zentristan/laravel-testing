@@ -10,16 +10,81 @@
     --secondary-font: "Outfit", sans-serif;
     --accent-font: "Cormorant Garamond", serif;
 }
-
 body {
     background: #0F2D2B;
     background: linear-gradient(0deg, rgba(15, 45, 43, 1) 1%, rgba(20, 117, 86, 1) 100%);
     width: 100%;
 }
+
 .page-choosing-category{
-    background-color: var(--card-color);
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 20px 40px;
+    /* box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2); */
 }
 .logo-image-single {
     width: auto;
-    height: 80px;
+    height: 50px;
+}
+.header-choosing-register{
+    color: var(--text-color);
+    font-family: var(--accent-font);
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+.description-card{
+    color: var(--text-color);
+    font-family: var(--secondary-font);
+    opacity: 0.7;
+    font-weight: 300;
+}
+.header-card{
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.role-category-card{
+    border: 1px solid rgba(29, 158, 117, 0.5);
+    border-radius: 30px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    background-color: var(--card-color);
+    transition: all 0.5s;
+}
+.role-category-card.selected {
+    border: 1px solid white;
+    background-color: #184A47;
+    box-shadow: 0 -10px 40px rgba(29, 158, 117, 0.2);
+}
+.role-category-card.selected .radio-icon::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f192"; 
+}
+.daftar-submit-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.daftar-submit-button:not(.disabled) {
+    opacity: 1;
+    pointer-events: auto;
+}
+.role-category-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 -10px 40px rgba(29, 158, 117, 0.2);
+}
+.password-container{
+    position: relative;
+}
+.daftar-submit-button{
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    font-weight: 700;
+    font-family: var(--body-font);
+    padding: 5px 20px;
+    transition: all 0.5s;
+    font-size: 1.5rem;
 }
