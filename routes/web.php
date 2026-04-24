@@ -3,6 +3,9 @@
 use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
+Route::prefix('Dashboard')->group(function () {
+});
+
 Route::resource('/siswas', SiswaController::class);
 
 Route::get('/', function () {
@@ -13,17 +16,30 @@ Route::get('/LowonganJasa', function () {
     return view('Lowongan_Jasa.lowonganjasa');
 });
 
+Route::get('/LowonganJasaNo', function () {
+    return view('Lowongan_Jasa.lowonganjasano');
+});
+
 Route::get('/PasarJasa', function () {
     return view('Pasar_Jasa.pasarjasa');
 });
 
-Route::get('/Dashboard', function () {
-    return view('Dashboard_Siswa.dashboard_siswa');
+Route::get('/Sidebar', function () {
+    return view('components.sidebar');
 });
 
-Route::get('/Lamaran', function () {
-    return view('Lamaran_Siswa.lamaran_siswa');
+Route::get('/Navbarno', function () {
+    return view('components.navbar_templateno');
 });
+
+Route::get('/Navbar', function () {
+    return view('components.navbar_template');
+});
+
+Route::get('/Dashboard', function () {
+    return view('Dashboard_Siswa.dashboard_siswa');
+})->name('Dashboard');
+
 Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
 });
@@ -33,6 +49,28 @@ Route::get('/LandingPage', function () {
 Route::get('/Register', function () {
     return view('Register_Page/register');
 })-> name('register');
+<<<<<<< HEAD
+
+Route::get('/Login', function () {
+    return view('Register_Page/login');
+})-> name('login');
+
+Route::get('/Register-Talenta', function () {
+    return view('Register_Page/register-talenta');
+})-> name('register.talenta');
+
+Route::get('/Register-Klien', function () {
+    return view('Register_Page/register-klien');
+}) -> name('register.klien');;
+
+Route::get('/Register-Mentor', function () {
+    return view('Register_Page/register-mentor');
+})-> name('register.mentor');;
+
+
+
+=======
+>>>>>>> 431bd83bcff83e5fa342900a3dbc6db084a594a2
 
 Route::get('/Login', function () {
     return view('Register_Page/login');
@@ -53,13 +91,18 @@ Route::get('/Register-Mentor', function () {
 
 
 
-Route::get('/LowonganJasa', function () {
-    return view('Lowongan_Jasa.lowonganjasa');
-});
+Route::get('/Proyek', function () {
+    return view('Proyek_Siswa.proyek_siswa');
+})->name('Proyek');
 
-Route::get('/PasarJasa', function () {
-    return view('Pasar_Jasa.pasarjasa');
-});
-// Route::get('/siswa', function () {
-//     return view('siswas.index');
-// });
+Route::get('/Portofolio', function () {
+    return view('Portofolio_Siswa.portofolio_siswa');
+})->name('Portofolio');
+
+Route::get('/Lencana', function () {
+    return view('Lencana_Siswa.lencana_siswa');
+})->name('Lencana');
+
+Route::get('/UbahProfil', function () {
+    return view('Ubah_Siswa.ubah_siswa');
+})->name('UbahProfil');
