@@ -32,6 +32,7 @@
 
     {{-- JS --}}
     <script src="{{ asset("js/navbar.js") }}"></script>
+    <script src="{{ asset("js/popup-pesan-jasa.js") }}"></script>
 
 </head>
 
@@ -100,10 +101,56 @@
             <div class="button-pesan card_color p-4">
                 <h2 class="text-color m-0">Harga mulai dari</h2>
                 <p class="accent-color fw-bold fs-1">20.000.000</p>
-                <button class="btn text-color fs-5 ">Pesan Sekarang</button>
+                <button onclick="bukaPopup()" class="btn text-color fs-5 outfit">Pesan Sekarang</button>
             </div>
         </div>
     </div>
+    <div class="overlay" id="overlay"></div>
+
+        <div class="popup flex-column p-4" id="popup">
+            <div class="d-flex justify-content-between">
+                <h2 class="text-color outfit fs-4">Konfirmasi Pesanan</h2>
+                <img class="cursor-pointer" onclick="tutupPopup()" src="{{ asset('images/x-solid.png') }}" width="20" height="20">
+            </div>
+            <p class="text-color-secondary mb-2 outfit">Isi data di bawah ini untuk melanjutkan pesanan</p>
+            <div class="popup-jasa p-3 rounded-2 mb-2">
+                <h3 class="outfit text-wrap text-color outfit">Harga Jasa Talenta yang dipesan</h3>
+                <div class="popup-harga d-flex justify-content-between">
+                    <p class="text-color-secondary mb-0 outfit">Harga</p>
+                    <p class="accent-color mb-0 fw-bold outfit">Rp. 200.000</p>
+                </div>
+            </div>
+            {{-- <form action="" method="POST"> --}}
+                <div class="popup-nama d-flex flex-column">
+                    <label class="text-color-secondary outfit">Nama Anda <b>*</b></label>
+                    <input class="text-color" type="text" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="popup-nomor d-flex flex-column">
+                    <label class="text-color-secondary outfit">Nomor telepon <b>*</b></label>
+                    <input class="text-color" type="tel" placeholder="08123456789" required minlength="10" maxlength="13">
+                </div>
+                <div class="popup-email d-flex flex-column">
+                    <label class="text-color-secondary outfit">Email <b>*</b></label>
+                    <input class="text-color" type="email" placeholder="email@gmail.com" required>
+                </div>
+                <div class="popup-catatan d-flex flex-column">
+                    <label class="text-color-secondary outfit">Catatan (opsional)</label>
+                    <textarea class="text-color" id="notes" name="catatan" rows="2" cols="40" placeholder="Jelaskan keterangan secara singkat"></textarea>
+                </div>
+                <button class="btn text-color fs-5 outfit mt-3" type="submit" onclick="konfirmasiPesanan()">Konfirmasi Pesanan</button>
+            {{-- </form> --}}
+        </div>
+
+        <div class="popup-sukses flex-column" id="popup-sukses">
+            <div class="d-flex flex-column">
+                <div class="logo rounded-circle bg_primary justify-content-center align-items-center mx-auto mb-3">
+                    <img class="justify-content-center align-items-center" width="80" height="80" src="{{ asset('images/vokaralogo.png') }}">
+                </div>
+                <h2 class="outfit text-color fw-bold text-center">Pesanan Berhasil!</h2>
+                <p class="outfit text-color-secondary text-center text-wrap">Pesanan Anda telah dikirim. Talenta akan segera meninjau brief Anda dan menghubungi melalui WhatsApp.</p>
+                <a class="btn text-color fs-5 outfit mt-3 justify-content-center mx-auto" href="/PasarJasa">Kembali</a>
+            </div>
+        </div>
 </x-layout>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
