@@ -43,57 +43,64 @@
             <p class="m-0">Kembali ke Temukan Talenta</p>
         </a>
         <div class="d-flex mt-4 justify-content-between ">
-            <div class="info">
-                <div class="jasa p-4 card_color">
+            <div class="info d-flex flex-column gap-4">
+                <div class="jasa card_color">
                     <h1 class="text-color text-wrap">Nama Jasa Talenta</h1>
-                    <div class="d-flex">
-                        <div class="rating-detail d-flex">
+                    <div class="d-flex px-4 gap-3">
+                        <div class="rating-detail d-flex gap-1">
                             <img width="20" height="20"  src="{{ asset("images/star-solid.png") }}">
-                            <p>5.0</p>
+                            <p class="fw-bold p-0">5.0</p>
                         </div>
-                        <div class="deadline-detail d-flex">
-                            <img>
-                            <p>60 Hari pengerjaan</p>
+                        <div class="deadline-detail d-flex gap-1">
+                            <img width="20" height="20" src="{{ asset("images/clock-regular.png") }}">
+                            <p class="text-color">60 Hari pengerjaan</p>
                         </div>
                     </div>
-                    <hr>
-                    <h2>Deskripsi Jasa</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis deleniti ex unde! Consequuntur
+                    <hr class="mt-0">
+                    <h2 class="px-4 text-color">Deskripsi Jasa</h2>
+                    <p class="px-4 mb-0 text-color">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis deleniti ex unde! Consequuntur
                         quis dolores in! Earum tenetur facere soluta eum perferendis placeat temporibus repellendus ab
                         necessitatibus natus voluptate, exercitationem hic? Nisi ipsa quam, ut alias sequi voluptates
                         atque nam facilis amet obcaecati autem, voluptatibus iusto sunt modi. Debitis, officiis!</p>
                 </div>
 
-                <div class="talenta">
-                    <h2>Tentang Talenta</h2>
+                <div class="talenta p-4 card_color">
+                    <h2 class="text-color mb-2">Tentang Talenta</h2>
                     <div class="d-flex">
-                        <img>
-                        <div class="d-flex flex-column">
-                            <p>Budiono Siregar Putra Kapal Lawd</p>
-                            <p>Keahlian – Asal Sekolah</p>
-                            <button class="d-flex">
-                                <img>
-                                <p>Lihat Profil</p>
+                        <img class="rounded-circle" width="60" height="60" src="{{ asset("images/background.png") }}">
+                        <div class="ms-2 d-flex flex-column">
+                            <p class="text-color fs-5 mb-0">Budiono Siregar Putra Kapal Lawd</p>
+                            <p class="text-color-secondary mb-1">Keahlian – Asal Sekolah</p>
+                            <button id="button-talenta" class="btn d-flex gap-1 p-1">
+                                <img width="20" height="20" src="{{ asset("images/user-regular.png") }}">
+                                <p class="text-color m-0">Lihat Profil</p>
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="ulasan">
-                    <h2>Ulasan Klien (3)</h2>
-                    <div class="ulasan-profil d-flex">
-                        <img>
-                        <p>Dimas Hotwil</p>
-                        <div class="ulasan-rating">
-                            <img>
-                            <p>5.0</p>
+                <div class="ulasan py-4 card_color">
+                    <h2 class="text-color mb-4 px-4">Ulasan Klien (3)</h2>
+                    <div class="ulasan-profil d-flex flex-column">
+                        <div class="d-flex gap-2 align-items-center mb-2 px-4">
+                            <img class="rounded-circle" width="40" height="40" src="{{ asset("images/background.png") }}">
+                            <p class="text-color mb-0">Dimas Hotwil</p>
+                            <div class="rating-ulasan d-flex mt-1 ms-2 gap-1">
+                                <img width="20" height="20"  src="{{ asset("images/star-solid.png") }}">
+                                <p class="fw-bold p-0 m-0">5.0</p>
+                            </div>
                         </div>
+                        <div class="ulasan-text px-4">
+                            <p class="text-color text-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quaerat facilis modi hic eius ab alias eaque officia quidem deleniti, at eos, voluptas assumenda impedit distinctio. Veritatis hic id fuga.</p>
+                        </div>
+                        <hr class="mt-0">
                     </div>
+                    
                 </div>
             </div>
-            <div class="button-pesan">
-                <h2>Harga mulai dari</h2>
-                <p>200.000</p>
-                <button>Pesan Sekarang</button>
+            <div class="button-pesan card_color p-4">
+                <h2 class="text-color m-0">Harga mulai dari</h2>
+                <p class="accent-color fw-bold fs-1">20.000.000</p>
+                <button class="btn text-color fs-5 ">Pesan Sekarang</button>
             </div>
         </div>
     </div>

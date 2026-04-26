@@ -54,8 +54,73 @@
 .jasa {
     border-radius: 15px;
     border: 1px solid rgba(29, 158, 117, 0.1);
+    padding: 24px 0px 24px 0px;
 }
 .jasa h1 {
     font-size: 36px;
     font-weight: 500;
+    padding: 0px 24px;
+}
+.jasa hr {
+    background-color: var(--primary-color);
+    height: 1px;
+    border: none;
+}
+.container-info-jasa h2 {
+    font-size: 28px;
+}
+.rating-detail p {
+    color: #eea026;
+    font-size: 14px;
+    padding: 0px 24px;
+}
+.deadline-detail p {
+    font-size: 14px;
+    
+}
+.talenta {
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.1);
+}
+.talenta img {
+    margin-top: 2px;
+}
+#button-talenta {
+    width: 37%;
+    background-color: rgba(29, 158, 117, 0.2);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+}
+.ulasan {
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.1);
+}
+.rating-ulasan p {
+    color: #eea026;
+    font-size: 14px;
+    padding: 0px 24px;
+}
+.ulasan-profil hr {
+    background-color: var(--primary-color);
+    height: 1px;
+    border: none;
+}
+.button-pesan {
+    border-radius: 15px;
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    height: fit-content;
+    position: sticky;
+    top: 30px;
+}
+.button-pesan button {
+    background-color: var(--primary-color);
+    border: 1px solid rgba(29, 158, 117, 0.1);
+    width: 100%;
+    font-weight: 500;
+}
+.button-pesan button:active,
+.button-pesan button:hover,
+.button-pesan button:focus {
+    background-color: var(--primary-color) !important;
+    outline: none !important;
+    color: var(--text-color) !important;
 }
