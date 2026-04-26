@@ -117,23 +117,25 @@
                     <p class="accent-color mb-0 fw-bold outfit">Rp. 200.000</p>
                 </div>
             </div>
-            <div class="popup-nama d-flex flex-column">
-                <label class="text-color-secondary outfit">Nama Anda <b>*</b></label>
-                <input class="text-color" type="text" placeholder="Nama Lengkap" required>
-            </div>
-            <div class="popup-nomor d-flex flex-column">
-                <label class="text-color-secondary outfit">Nomor telepon <b>*</b></label>
-                <input class="text-color" type="tel" placeholder="08123456789" required minlength="10" maxlength="13">
-            </div>
-            <div class="popup-email d-flex flex-column">
-                <label class="text-color-secondary outfit">Email <b>*</b></label>
-                <input class="text-color" type="email" placeholder="email@gmail.com" required>
-            </div>
-            <div class="popup-catatan d-flex flex-column">
-                <label class="text-color-secondary outfit">Catatan (opsional)</label>
-                <textarea class="text-color" id="notes" name="catatan" rows="2" cols="40" placeholder="Jelaskan keterangan secara singkat"></textarea>
-            </div>
-            <button class="btn text-color fs-5 outfit mt-3">Konfirmasi Pesanan</button>
+            <form action="" method="POST">
+                <div class="popup-nama d-flex flex-column">
+                    <label class="text-color-secondary outfit">Nama Anda <b>*</b></label>
+                    <input class="text-color" type="text" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="popup-nomor d-flex flex-column">
+                    <label class="text-color-secondary outfit">Nomor telepon <b>*</b></label>
+                    <input class="text-color" type="tel" placeholder="08123456789" required minlength="10" maxlength="13">
+                </div>
+                <div class="popup-email d-flex flex-column">
+                    <label class="text-color-secondary outfit">Email <b>*</b></label>
+                    <input class="text-color" type="email" placeholder="email@gmail.com" required>
+                </div>
+                <div class="popup-catatan d-flex flex-column">
+                    <label class="text-color-secondary outfit">Catatan (opsional)</label>
+                    <textarea class="text-color" id="notes" name="catatan" rows="2" cols="40" placeholder="Jelaskan keterangan secara singkat"></textarea>
+                </div>
+                <button class="btn text-color fs-5 outfit mt-3 t" type="submit">Konfirmasi Pesanan</button>
+            </form>
         </div>
 </x-layout>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
