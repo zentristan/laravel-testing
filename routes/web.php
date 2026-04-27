@@ -24,10 +24,6 @@ Route::get('/PasarJasa', function () {
     return view('Pasar_Jasa.pasarjasa');
 });
 
-Route::get('/Sidebar', function () {
-    return view('components.sidebar');
-});
-
 Route::get('/Sidebar_Mentor', function () {
     return view('components.sidebar_mentor');
 });

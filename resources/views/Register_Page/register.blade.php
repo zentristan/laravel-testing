@@ -31,41 +31,76 @@
 
 </section>
 
-<body>
-    <section>
-        <div class="container">
-            <div class="page-choosing-category min-h-48">
+<body class="flex justify-center items-center min-h-screen">
+    <section class="w-full max-w-xl px-4">
+        <div class="container m-auto">
+            <div class="page-choosing-category min-h-40 ">
                 <div class="logo-section">
                     <img src="{{ asset('images/fav.png') }}" alt="Vokara Logo" class="logo-image-single mx-auto">
                 </div>
                 <div class="heading-section">
-                    <h2>Pilih Ingin Mendaftar Menjadi Apa?</h2>
+                    <h2 class="header-choosing-register text-center my-1">Pilih Ingin Mendaftar Menjadi Apa?</h2>
                 </div>
-                <div class="form-choose-section">
-                    <div class="grid grid-cols-2">
-                        <div class="talenta-category-card">
-                            <i class="fa-solid fa-graduation-cap" style="color: rgb(224, 242, 236);"></i>
-                            <h4>Talenta</h4>
-                            <p>Daftar Sebagai Siswa Untuk Mengembangkan Portofolio</p>
+                <div class="form-choose-section flex-col justify-center">
+                    <div class="grid grid-cols-1">
+                        <div class="role-category-card w-full gap-5 flex justify-between items-center" data-role="talenta" onclick="selectRole(this)">
+                            <div class="w-90">
+                                <i class="fa-solid fa-graduation-cap mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <h4 class="header-card">Saya Talenta, <span class="description-card">Ingin Menambahkan Portfolio</span></h4>
+                            </div>
+                            <i class="radio-icon fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
                         </div>
-                        <div class="klien-category-card">
-                            <i class="fa-solid fa-briefcase" style="color: rgb(224, 242, 236);"></i>
-                            <h4>Klien</h4>
-                            <p>Daftar Sebagai Klien Untuk Menawarkan Jasa</p>
+                        <div class="role-category-card w-full gap-5 flex justify-between items-center" data-role="klien" onclick="selectRole(this)">
+                            <div>
+                                <i class="fa-solid fa-briefcase mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <h4 class="header-card">Saya Klien, <span class="description-card">Ingin Mencari Jasa Untuk Di Pekerjakan</span></h4>
+                            </div>
+                            <i class="radio-icon fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
                         </div>
-                        <div class="mentor-category-card">
-                            <i class="fa-solid fa-book-open" style="color: rgb(224, 242, 236);"></i>
-                            <h4>Mentor</h4>
-                            <p>Daftar Sebagai Mentor Untuk Mendampingi Siswa</p>
+                        <div class="role-category-card w-full gap-5 flex justify-between items-center" data-role="mentor" onclick="selectRole(this)">
+                            <div>
+                                <i class="fa-solid fa-book-open mb-3" style="color: rgb(224, 242, 236); font-size: 3rem;"></i>
+                                <h4 class="header-card">Saya Mentor, <span class="description-card">Ingin Mendampingi Talenta</span></h4>
+                            </div>
+                            <i class="radio-icon fa-regular fa-circle-dot" style="color: rgb(224, 242, 236); font-size: 1.5rem;"></i>
                         </div>
+                        <button type="submit" id="btn-pilih" class="daftar-submit-button w-full my-5 disabled" onclick="proceed()">Pilih</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        let selectedRole = null;
 
+        function selectRole(card) {
+            document.querySelectorAll('.role-category-card').forEach(c => {
+                c.classList.remove('selected');
+                const icon = c.querySelector('.radio-icon');
+                icon.classList.remove('fa-solid');
+                icon.classList.add('fa-regular');
+            });
 
-    <script src="{{ asset('js/LandingPage.js') }}"></script>
+            card.classList.add('selected');
+            const selectedIcon = card.querySelector('.radio-icon');
+            selectedIcon.classList.remove('fa-regular');
+            selectedIcon.classList.add('fa-solid');
+
+            selectedRole = card.dataset.role;
+            document.getElementById('btn-pilih').classList.remove('disabled');
+        }
+
+        function proceed() {
+            if (!selectedRole) return;
+
+            const routes = {
+                talenta: "{{ route('register.talenta')}}",
+                klien: "{{ route('register.klien')}}",
+                mentor: "{{ route('register.mentor')}}",
+            };
+            window.location.href = routes[selectedRole] + '?role=' + selectedRole;
+        }
+    </script>
+    <script src="{{ asset('js/RegisterPage.js') }}"></script>
 </body>
-
 </html>
