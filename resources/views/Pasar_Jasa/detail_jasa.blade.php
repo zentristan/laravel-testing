@@ -46,7 +46,7 @@
         <div class="d-flex mt-4 justify-content-between ">
             <div class="info d-flex flex-column gap-4">
                 <div class="jasa card_color">
-                    <h1 class="text-color text-wrap">{{$detailTalenta->nama}}</h1>
+                    <h1 class="text-color text-wrap">{{$detailTalenta->namajasa}}</h1>
                     <div class="d-flex px-4 gap-3">
                         <div class="rating-detail d-flex gap-1">
 
