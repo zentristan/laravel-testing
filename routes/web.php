@@ -114,6 +114,8 @@ Route::get('/PasarJasa', [talentaController::class, 'index'])->name('PasarJasa.i
 
 Route::get('/PasarJasa/kategori/{id}', [talentaController::class, 'filterbyKategori'])->name('filterKategori');
 
+Route::get('/Lowongan/kategori/{id}', [KlienJobsController::class, 'filterbyKategori'])->name('filterKategoriProyek');
+
 Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
 
 Route::get('/Lowongan', [KlienJobsController::class, 'index',])->name('Lowongan.index');

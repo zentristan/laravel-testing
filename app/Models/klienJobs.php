@@ -16,4 +16,9 @@ class klienJobs extends Model
         'status',
         'id_client'
     ];
+
+    public function kategori()
+    {
+        return $this->belongsTo(kategori::class, 'id_kategori');
+    }
 }
