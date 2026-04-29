@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\KlienJobsController;
 use App\Http\Controllers\talentaController;
+use App\Http\Controllers\KlienJobsController;
 use App\Http\Controllers\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,7 +27,39 @@ Route::get('/PasarJasa', [talentaController::class, 'index'])->name('PasarJasa.i
 
 Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
-})->name('landingPage');
+});
+
+Route::get('/Lamaran', function () {
+    return view('Lamaran_Siswa.lamaran_siswa');
+})->name('Lamaran');
+
+Route::get('/Proyek', function () {
+    return view('Proyek_Siswa.proyek_siswa');
+})->name('Proyek');
+
+Route::get('/Portofolio', function () {
+    return view('Portofolio_Siswa.portofolio_siswa');
+})->name('Portofolio');
+
+Route::get('/Lencana', function () {
+    return view('Lencana_Siswa.lencana_siswa');
+})->name('Lencana');
+
+Route::get('/Orderan', function () {
+    return view('Orderan_Siswa.orderan_siswa');
+})->name('Orderan');
+
+Route::get('/Jasa', function () {
+    return view('JasaTalenta_Klien.jasatalenta_klien');
+})->name('Jasa');
+
+Route::get('/Keterangan', function () {
+    return view('Keterangan_siswa.keterangan_siswa');
+});
+
+Route::get('/Keterangan-Diterima', function () {
+    return view('Keterangan_siswa.keterangan_siswa_diterima');
+});
 
 Route::get('/Login', function () {
     return view('Register_Page/login');
