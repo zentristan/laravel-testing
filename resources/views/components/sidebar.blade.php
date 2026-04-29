@@ -13,7 +13,7 @@
                 <p>Foto</p>
             </div>
             <div class="profil-info">
-                <h2>{{ Auth::user()->name }}</h2>
+                <h2>{{ Auth::user()?->name }}</h2>
                 <p>SMK Informatika Pesat</p>
             </div>
         </div>
@@ -34,7 +34,7 @@
             <a href="{{ url('Proyek') }}"><li class="{{ $route == 'Proyek' ? 'active' : '' }}"><i class="bi bi-suitcase-lg"></i>Proyek Aktif</li></a>
             <a href="{{ url('Portofolio') }}"><li class="{{ $route == 'Portofolio' ? 'active' : '' }}"><i class="bi bi-folder2-open"></i>Portofolio</li></a>
             <a href="{{ url('Lencana') }}"><li class="{{ $route == 'Lencana' ? 'active' : '' }}"><i class="fa-solid fa-medal"></i>Lencana</li></a>
-            <a href="{{ url('UbahProfil') }}"><li class="{{ $route == 'UbahProfil' ? 'active' : '' }}"><i class="fa-regular fa-user"></i>Ubah Profil</li></a>
+            <a href="{{ url('UbahSiswa') }}"><li class="{{ $route == 'UbahSiswa' ? 'active' : '' }}"><i class="fa-regular fa-user"></i>Ubah Profil</li></a>
         </ul>
     </div>
 
@@ -43,7 +43,7 @@
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
 
-                <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 button-logout">
+                <button type="submit" class="button-logout">
                     <i class="bi bi-box-arrow-right"></i>
                     {{ __('Log Out') }}
                 </button>
