@@ -21,14 +21,28 @@
             </section>
 
             <section class="content-tp">
-                <x-kategori-side-bar :kategori="$kategori" />
+
+            <aside class="sidebar-tp">
+                <h3>Kategori</h3>
+                <ul>
+                    @foreach($kategori as $kategoriData)
+                    <a href="{{route('filterKategoriProyek', $kategoriData->id)}}">
+                    <li class="outfit ">{{$kategoriData->namaKategori}}</li>
+                    </a>
+                    @endforeach
+                    <!-- active (untuk kelas aktif sidebar) -->
+                </ul>
+            </aside>
+
+
                 <div class="jobs-tp row row-cols-lg-3 gap-3">
                     @foreach($klien as $klienjob)
+                    <a href="{{route('LowonganJasa.show', $klienjob->id)}}">
                     <div class="col card-tp p-0 hover-properti">
-                        <span class="card-tag-tp outfit"><img class="me-1" width="15" height="15" src="{{ asset("images/tag-solid.png") }}">Kategori</span>
+                        <span class="card-tag-tp outfit"><img class="me-1" width="15" height="15" src="{{ asset("images/tag-solid.png") }}">{{$klienjob->namaKategori}}</span>
                         <div class="card-bottom-tp d-flex flex-column">
                             <p class="card-bottom-title-tp text-color">{{$klienjob->judul_proyek}}</p>
-                            <p class="card-bottom-subtitle-tp">{{$klienjob->deskripsi}}</p>
+                            <p class="card-bottom-subtitle-tp text-truncate">{{$klienjob->deskripsi}}</p>
                             <div class="card-bottom-info d-flex justify-content-between">
                                 <div class="d-flex gap-3 object-fit-contain mt-3">
                                     <div class="pelamar-tp d-flex object-fit-contain">
@@ -37,7 +51,7 @@
                                     </div>
                                     <div class="deadline-tp d-flex object-fit-contain">
                                         <img src="{{ asset("images/clock-regular.png") }}">
-                                        <p class="outfit">{{$klienjob->deadline}}</p>
+                                        <p class="outfit">{{$klienjob->deadline}} Hari</p>
                                     </div>
                                 </div>
                                 <div class="harga-tp d-flex flex-column mt-2">
@@ -47,6 +61,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                     @endforeach
                 </div>
             </section>

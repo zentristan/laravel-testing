@@ -14,4 +14,9 @@ class kategori extends Model
     {
         return $this->hasMany(talentaJob::class, 'id_kategori');
     }
+
+    public function proyek()
+    {
+        return $this->hasMany(klienJobs::class, 'id_kategori');
+    }
 }
