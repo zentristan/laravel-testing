@@ -43,7 +43,7 @@
                     <div class="form-group">
                         <h4 class="form-heading">Tenggat Waktu *</h4>
                         <p class="form-deskripsi">Masukkan jumlah hari yang dibutuhkan untuk menyelesaikan jasa ini</p>
-                        <input type="number" name="deadline" class="input-box w-100" placeholder="cth. 10.">
+                        <input type="date" name="deadline" class="input-box w-100" placeholder="cth. 10.">
                     </div>
                 </div>
             </div>
