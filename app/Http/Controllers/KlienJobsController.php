@@ -11,10 +11,13 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class KlienJobsController extends Controller
-{
+{ 
     public function index()
     {
-        $klien = klienJobs::all();
+        $klien = klienJobs::join('kategoris', 'klien_jobs.id_kategori', '=', 'kategoris.id')
+        ->select('klien_jobs.*', 'klien_jobs.id as id', 'kategoris.namaKategori')
+        ->get();
+
         $kategori = kategori::all();
         return view('Lowongan_Jasa.lowonganjasa', compact('klien', 'kategori'));
     }
@@ -23,6 +26,17 @@ class KlienJobsController extends Controller
     {
         return view('Penambahan_Klien.penambahan-klien');
     }
+
+
+        public function show($id)
+    {
+        $detailLowongan = klienJobs::findOrFail($id);
+        $kategori = kategori::all();
+
+
+        return view('Lowongan_jasa.detail_lowongan', compact('detailLowongan', 'kategori'));
+    }
+
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
@@ -41,5 +55,18 @@ class KlienJobsController extends Controller
             'deadline' => $request->deadline,
         ]);
         return redirect('/Lowongan')->with('success', 'Proyek berhasil diposting!');
+    }
+
+        public function filterbyKategori($id)
+    {
+        // $talenta = talentaJob::where('id_kategori', $id)->get();
+        $kategori = kategori::all();
+       
+        $klien = klienJobs::join('kategoris', 'klien_jobs.id_kategori', '=', 'kategoris.id')
+        ->where('klien_jobs.id_kategori', $id)
+        ->select('klien_jobs.*', 'kategoris.namaKategori')
+        ->get();
+
+        return view('Lowongan_Jasa.lowonganjasa', compact('klien', 'kategori'));  
     }
 }
