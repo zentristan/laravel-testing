@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\talentaController;
+use App\Http\Controllers\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,6 +13,14 @@ Route::get('/', function () {
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/Dashboard', function () {
+    return view('Dashboard_Siswa.dashboard_siswa');
+})->name('dashboard.siswa');
+
+Route::get('/Dashboard_Mentor', function () {
+    return view('Dashboard_Mentor.dashboard_mentor');
+})->name('dashboard.mentor');
 
 Route::get('/PasarJasa', [talentaController::class, 'index'])->name('PasarJasa.index');
 
@@ -23,8 +32,8 @@ Route::get('/Login', function () {
     return view('Register_Page/login');
 })-> name('login');
 
-Route::get('/Register', function () {
-    return view('Register_Page/register');
+Route::get('/register', function () {
+    return view('auth.register-choosing');
 })-> name('register');
 
 Route::get('/LowonganJasa/{id}', [KlienJobsController::class, 'show'])->name('LowonganJasa.show');
@@ -39,9 +48,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
-    
-    
 
+    Route::middleware('role:talenta')->group(function(){
+        Route::get('/Dasboard_Siswa/dashboard_siswa', [DashboardController::class, 'talenta'])->name('dashboard.siswa');
+        Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+    });
+    Route::middleware('role:mentor')->group(function(){
+        Route::get('/Dasboard_Mentor/dashboard_mentor', [DashboardController::class, 'mentor'])->name('dashboard.mentor');
+        Route::get('/PasarJasa/{id}', [talentaController::class, 'show'])->name('PasarJasa.show');
+    });
 });
 
 Route::middleware('auth')->group(function () {
@@ -54,5 +69,6 @@ Route::middleware('auth')->group(function () {
     
 
 });
+
 
 require __DIR__.'/auth.php';
