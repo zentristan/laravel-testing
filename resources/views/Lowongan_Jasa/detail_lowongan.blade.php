@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <hr class="mt-0">
-                    <h2 class="px-4 text-color">{{$detailLowongan->judul_proyek}}</h2>
+                    <h2 class="px-4 text-color">Deskripsi Jasa</h2>
                     <p class="px-4 mb-0 text-color">{{$detailLowongan->deskripsi}}</p>
                 </div>
 
@@ -112,7 +112,7 @@
             </div>
             <p class="text-color-secondary mb-2 outfit">Isi data di bawah ini untuk melanjutkan pesanan</p>
             <div class="popup-jasa p-3 rounded-2 mb-2">
-                <h3 class="outfit text-wrap text-color outfit">{{$detailLowongan->namajasa}}</h3>
+                <h3 class="outfit text-wrap text-color outfit">{{$detailLowongan->judul_proyek}}</h3>
                 <div class="popup-harga d-flex justify-content-between">
                     <p class="text-color-secondary mb-0 outfit">Harga</p>
                     <p class="accent-color mb-0 fw-bold outfit">Rp{{number_format($detailLowongan->harga, 0, ',', '.')}}</p>
