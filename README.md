@@ -13,7 +13,6 @@ Terdapat tiga peran utama dalam platform:
 - **Klien** — Individu atau UMKM sebagai pemberi proyek dan juga pemesan jasa
 - **Mentor** — Guru sekolah asal sebagai pembimbing dan validator Siswa SMK
 
-- 
 ## 🛠️ Tech Stack
  
 | Layer | Teknologi |
