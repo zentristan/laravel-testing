@@ -30,9 +30,17 @@
 
     <div class="sidebar-klien-bottom">
         <ul>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <button type="submit" class="button-logout">
+                    <i class="bi bi-box-arrow-right"></i>
+                    {{ __('Log Out') }}
+                </button>
+            </form>
             <a href="{{ url('Lowongan') }}"><li><i class="bi bi-rocket-takeoff"></i>Lihat Proyek</li></a>  
             <a href="{{ url('PasarJasa') }}"><li><i class="bi bi-rocket-takeoff"></i>Lihat Talenta</li></a>  
-            <li><i class="bi bi-box-arrow-right"></i>Keluar</li>
+
         </ul>
     </div>
 </section>

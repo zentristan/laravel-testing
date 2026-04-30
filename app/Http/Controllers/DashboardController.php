@@ -21,10 +21,13 @@ class DashboardController extends Controller
         // } elseif ($user->role === 'talent') {
         //     return view('dashboard_talent', compact('posts'));
         // }
-        if ($user->role === 'klien') {
+        if ($user->role === 'mentor') {
             return view('Dashboard_Mentor.dashboard_mentor');
         } elseif ($user->role === 'talent') {
             return view('Dashboard_Siswa.dashboard_siswa');
+        } elseif ($user->role === 'klien'){
+            return view('Dashboard_Klien.dashboard_klien');
         }
+        
     }
 }

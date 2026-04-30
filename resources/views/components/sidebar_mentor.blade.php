@@ -21,13 +21,13 @@ $route = request()->route()->getName();
 
     <div class="sidebar-mentor-nav">
         <ul>
-            <a href="{{ url('Dashboard_Mentor') }}">
+            <a href="{{ route('Dashboard_Mentor') }}">
                 <li class="{{ $route == 'Dashboard_Mentor' ? 'active' : '' }}"><i class="bi bi-columns-gap"></i>Overview</li>
             </a>
-            <a href="{{ url('Daftar_Siswa') }}">
+            <a href="{{ route('Daftar_Siswa') }}">
                 <li class="{{ $route == 'Siswa' ? 'active' : '' }}"><i class="fa-solid fa-user-graduate"></i>Siswa</li>
             </a>
-            <a href="{{ url('UbahGuru') }}">
+            <a href="{{ route('UbahGuru') }}">
                 <li class="{{ $route == 'UbahGuru' ? 'active' : '' }}"><i class="fa-regular fa-user"></i>Ubah Profil</li>
             </a>
         </ul>

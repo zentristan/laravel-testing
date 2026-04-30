@@ -156,3 +156,15 @@
 a{
     text-decoration: none;
 }
+.button-logout { 
+    font-size: 14px;
+    background-color: transparent !important;
+    border: none;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+.button-logout i {
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+    margin-left: -8px;                          
+}
