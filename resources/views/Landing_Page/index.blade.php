@@ -42,7 +42,7 @@
                     </a>
                 </div>
                 <div class="nav-menu d-flex">
-                    <a href="/PasarJasa" class="nav-link">Temukan Talenta</a>
+                    <a href="{{ route('PasarJasa.index')}}" class="nav-link">Temukan Talenta</a>
                     <a href="{{ route('lowongan.index')}}" class="nav-link">Temukan Proyek</a>
                 </div>
                 <div class="nav-button d-flex">

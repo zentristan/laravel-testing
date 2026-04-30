@@ -13,8 +13,8 @@
                 <p>Foto</p>
             </div>
             <div class="profil-klien-info">
-                <h2>Nama Klien</h2>
-                <p>SMK Informatika Pesat</p>
+                <h2>{{ Auth::user()?->name }}</h2>
+                <p>{{ Auth::user()?->asal_sekolah }}</p>
             </div>
         </div>
     </div>

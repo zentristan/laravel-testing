@@ -16,8 +16,8 @@
                         <div class="user-info d-flex">
                             <img class="profile-dropdown" src="{{ asset("images/user.png") }}">
                             <div class="profile-text d-flex flex-column gap-1">
-                                <h3 class="username-dropdown">Budiono Siregar</h3>
-                                <h5 class="status-akun fw-light">Siswa/Klien/Guru</h5>
+                                <h3 class="username-dropdown">{{ Auth::user()?->name }}</h3>
+                                <h5 class="status-akun fw-light">{{ Auth::user()?->role }}</h5>
                             </div>
                         </div>
                         <hr>

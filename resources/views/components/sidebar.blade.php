@@ -14,7 +14,7 @@
             </div>
             <div class="profil-info">
                 <h2>{{ Auth::user()?->name }}</h2>
-                <p>SMK Informatika Pesat</p>
+                <p>{{ Auth::user()?->asal_sekolah }}</p>
             </div>
         </div>
         <div class="badges">

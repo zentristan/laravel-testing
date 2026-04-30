@@ -23,7 +23,7 @@ Route::get('/', function () {
 //     return view('Dashboard_Mentor.dashboard_mentor');
 // })->name('dashboard.mentor');
 
-Route::get('/PasarJasa', [talentaController::class, 'index'])->name('PasarJasa.index');
+
 
 Route::get('/LandingPage', function () {
     return view('Landing_Page/index');
@@ -72,6 +72,8 @@ Route::get('/register', function () {
 })->name('register');
 
 Route::get('/lowongan', [KlienJobsController::class, 'index'])->name('lowongan.index');
+
+Route::get('/PasarJasa', [talentaController::class, 'index'])->name('PasarJasa.index');
 
 Route::get('/LowonganJasa/{id}', [KlienJobsController::class, 'show'])->name('LowonganJasa.show');
 
